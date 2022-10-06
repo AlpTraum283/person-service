@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/core-api/core-api.iml" filepath="$PROJECT_DIR$/core-api/core-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/dependency-management-bom/dependency-management-bom.iml" filepath="$PROJECT_DIR$/dependency-management-bom/dependency-management-bom.iml" />
       <module fileurl="file://$PROJECT_DIR$/dto/dto.iml" filepath="$PROJECT_DIR$/dto/dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/migration/migration.iml" filepath="$PROJECT_DIR$/migration/migration.iml" />
       <module fileurl="file://$PROJECT_DIR$/person-service.iml" filepath="$PROJECT_DIR$/person-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
     </modules>

@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/dependency-management-bom/pom.xml" />
         <option value="$PROJECT_DIR$/dto/pom.xml" />
         <option value="$PROJECT_DIR$/utils/pom.xml" />
+        <option value="$PROJECT_DIR$/migration/pom.xml" />
       </list>
     </option>
   </component>
