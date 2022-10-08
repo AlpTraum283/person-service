@@ -10,18 +10,17 @@
         <module name="core-api" />
         <module name="utils" />
         <module name="core" />
-        <module name="dependency-management-bom" />
         <module name="dto" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="core" target="1.5" />
-      <module name="core-api" target="1.5" />
-      <module name="dependency-management-bom" target="1.5" />
-      <module name="dto" target="1.5" />
-      <module name="migration" target="1.5" />
+      <module name="core" target="11" />
+      <module name="core-api" target="11" />
+      <module name="dependency-management-bom" target="11" />
+      <module name="dto" target="11" />
+      <module name="migration" target="11" />
       <module name="person-service" target="11" />
-      <module name="utils" target="1.5" />
+      <module name="utils" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
