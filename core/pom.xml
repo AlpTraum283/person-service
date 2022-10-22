@@ -53,7 +53,7 @@
     </dependencies>
 
     <build>
-        <finalName>person-service</finalName>
+<!--        <finalName>person-service</finalName>-->
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
