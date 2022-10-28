@@ -17,6 +17,7 @@
         <mybatis.version>2.2.2</mybatis.version>
         <liquibase.version>4.8.0</liquibase.version>
         <liquibase.plugin.version>4.8.0</liquibase.plugin.version>
+        <data.jpa.version>2.7.5</data.jpa.version>
     </properties>
 
     <dependencyManagement>
