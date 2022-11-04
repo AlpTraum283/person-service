@@ -16,6 +16,7 @@ public class ContactController {
     public List<Contact> getContacts() {
         return service.getContacts();
     }
+
     @GetMapping("/contactbatis")
     public List<Contact> getContactsBatis() {
         return service.getContactsMyBatis();

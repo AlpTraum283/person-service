@@ -1,7 +1,7 @@
 package liga.medical.personservice.core.service;
 
+import liga.medical.personservice.core.mapper.IllnessMapper;
 import liga.medical.personservice.core.model.Illness;
-import liga.medical.personservice.core.repository.IllnessMapper;
 import liga.medical.personservice.core.repository.IllnessRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +15,11 @@ public class IllnessService {
     @Autowired
     IllnessMapper mapper;
 
-    public List<Illness> getIllnesses(){
+    public List<Illness> getIllnesses() {
         return repository.findAll();
     }
-    public List<Illness> getIllnessesMyBatis(){
+
+    public List<Illness> getIllnessesMyBatis() {
         return mapper.getIllnessesMyBatis();
     }
 }

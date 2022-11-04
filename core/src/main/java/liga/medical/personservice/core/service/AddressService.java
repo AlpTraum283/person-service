@@ -1,8 +1,8 @@
 package liga.medical.personservice.core.service;
 
-import liga.medical.personservice.core.repository.AddressMapper;
-import liga.medical.personservice.core.repository.AddressRepository;
+import liga.medical.personservice.core.mapper.AddressMapper;
 import liga.medical.personservice.core.model.Address;
+import liga.medical.personservice.core.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

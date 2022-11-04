@@ -1,4 +1,4 @@
-package liga.medical.personservice.core.repository;
+package liga.medical.personservice.core.mapper;
 
 import liga.medical.personservice.core.model.MedicalCard;
 import org.apache.ibatis.annotations.Mapper;

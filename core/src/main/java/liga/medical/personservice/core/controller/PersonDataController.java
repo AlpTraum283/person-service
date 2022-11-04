@@ -17,6 +17,7 @@ public class PersonDataController {
     public List<PersonData> getPersonData() {
         return service.getPersonData();
     }
+
     @GetMapping("/personbatis")
     public List<PersonData> getPersonDataBatis() {
         return service.getPersonDataMyBatis();
