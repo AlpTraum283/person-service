@@ -1,25 +1,18 @@
 package liga.medical.personservice.core.service;
 
-import liga.medical.personservice.core.mapper.AddressMapper;
-import liga.medical.personservice.core.model.Address;
+import liga.medical.personservice.core.model.entity.Address;
 import liga.medical.personservice.core.repository.AddressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AddressService {
     @Autowired
     AddressRepository repository;
-    @Autowired
-    AddressMapper mapper;
 
-    public List<Address> getAllAddresses() {
-        return repository.findAll();
-    }
-
-    public List<Address> getAllAddressesMyBatis() {
-        return mapper.getAddressesMyBatis();
+    public Optional<Address> getAddressById(Long id) {
+        return repository.findById(id);
     }
 }

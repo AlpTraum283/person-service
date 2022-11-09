@@ -1,4 +1,4 @@
-package liga.medical.personservice.core.model;
+package liga.medical.personservice.core.model.entity;
 
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -10,7 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import java.math.BigInteger;
 import java.util.Date;
 
 @Data
@@ -21,7 +20,7 @@ public class PersonData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @NotNull
-    private BigInteger id;
+    private Long id;
 
     @Column(name = "last_name")
     @NotNull
@@ -44,13 +43,14 @@ public class PersonData {
 
     @Column(name = "contact_id")
     @NotNull
-    private BigInteger contactId;
+    private Long contactId;
 
     @Column(name = "medical_card_id")
     @NotNull
-    private BigInteger medicalCardId;
+    private Long medicalCardId;
 
     @Column(name = "parent_id")
     @NotNull
-    private BigInteger parentId;
+    private Long parentId;
+
 }

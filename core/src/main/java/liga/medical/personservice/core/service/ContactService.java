@@ -1,25 +1,18 @@
 package liga.medical.personservice.core.service;
 
-import liga.medical.personservice.core.mapper.ContactMapper;
-import liga.medical.personservice.core.model.Contact;
+import liga.medical.personservice.core.model.entity.Contact;
 import liga.medical.personservice.core.repository.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ContactService {
     @Autowired
     ContactRepository repository;
-    @Autowired
-    ContactMapper mapper;
 
-    public List<Contact> getContacts() {
-        return repository.findAll();
-    }
-
-    public List<Contact> getContactsMyBatis() {
-        return mapper.getContactsMyBatis();
+    public Optional<Contact> getContactById(Long id) {
+        return repository.findById(id);
     }
 }

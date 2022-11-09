@@ -50,18 +50,21 @@ create table if not exists address
     flat       varchar(32)  not null
 );
 
-create table if not exists role
-(
-    id   bigserial    not null primary key unique,
-    name varchar(255) NOT NULL unique
-);
-
-create table if not exists "user"
+create table if not exists users
 (
     id       bigserial    not null primary key unique,
-    username    varchar(255) not null,
+    login    varchar(255) not null,
     password varchar(255) not null,
-    role     varchar(255) not null references role (name)
+    role     varchar(255) not null
+
+);
+
+create table if not exists signals
+(
+    id             bigserial    not null primary key unique,
+    person_data_id bigint       not null references person_data (id),
+    description    varchar(255) not null,
+    type           varchar(255) not null
 
 );
 

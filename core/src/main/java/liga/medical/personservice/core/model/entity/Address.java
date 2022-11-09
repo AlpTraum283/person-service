@@ -1,4 +1,4 @@
-package liga.medical.personservice.core.model;
+package liga.medical.personservice.core.model.entity;
 
 import lombok.Data;
 
@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import java.math.BigInteger;
 
 @Data
 @Entity
@@ -19,15 +18,15 @@ public class Address {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @NotNull
-    private BigInteger id;
+    private Long id;
 
     @Column(name = "contact_id")
     @NotNull
-    private BigInteger contactId;
+    private Long contactId;
 
     @Column(name = "country_id")
     @NotNull
-    private BigInteger countryId;
+    private Long countryId;
 
     @NotNull
     private String city;

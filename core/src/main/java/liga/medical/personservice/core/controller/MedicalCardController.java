@@ -1,24 +1,29 @@
 package liga.medical.personservice.core.controller;
 
-import liga.medical.personservice.core.model.MedicalCard;
-import liga.medical.personservice.core.service.MedicalCardService;
+import liga.medical.common.dto.annotations.DbLog;
+import liga.medical.personservice.core.model.entity.MedicalCard;
+import liga.medical.personservice.core.repository.MedicalCardRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.util.List;
 
 @RestController
+@RequestMapping("/medicalCard")
 public class MedicalCardController {
     @Autowired
-    MedicalCardService service;
+    MedicalCardRepository repository;
 
-    @GetMapping("/medicalcard")
-    public List<MedicalCard> getMedicalCards() {
-        return service.getMedicalCards();
+    @PutMapping
+    @DbLog
+    public MedicalCard updateMedicalCard(MedicalCard medicalCard) {
+        return repository.save(medicalCard);
     }
 
-    @GetMapping("/medicalcardbatis")
-    public List<MedicalCard> getMedicalCardsBatis() {
-        return service.getMedicalCardsMyBatis();
+    @PostMapping
+    @DbLog
+    public MedicalCard saveMedicalCard(MedicalCard medicalCard) {
+        return repository.save(medicalCard);
     }
 }

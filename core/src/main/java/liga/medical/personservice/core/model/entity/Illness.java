@@ -1,4 +1,4 @@
-package liga.medical.personservice.core.model;
+package liga.medical.personservice.core.model.entity;
 
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -10,34 +10,36 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import java.math.BigInteger;
+import java.sql.Timestamp;
 import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "medical_card")
-public class MedicalCard {
-
+@Table(name = "illness")
+public class Illness {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @NotNull
-    private BigInteger id;
+    private Long id;
 
-    @Column(name = "client_status")
+    @Column(name = "medical_card_id")
     @NotNull
-    private char clientStatus;
+    private Long medicalCardId;
 
-    @Column(name = "med_status")
+    @Column(name = "type_id")
     @NotNull
-    private char medStatus;
+    private Long typeId;
 
-    @Column(name = "registry_dt")
+    @NotNull
+    private char heaviness;
+
+    @Column(name = "appearance_dttm")
+    @NotNull
+    private Timestamp appearanceDttm;
+
+    @Column(name = "recovery_dt")
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     @NotNull
-    private Date registryDt;
-
-    @NotNull
-    private String comment;
-
+    private Date recoveryDt;
 }

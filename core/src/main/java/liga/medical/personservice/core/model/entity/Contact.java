@@ -1,4 +1,4 @@
-package liga.medical.personservice.core.model;
+package liga.medical.personservice.core.model.entity;
 
 import lombok.Data;
 
@@ -9,7 +9,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import java.math.BigInteger;
 
 @Data
 @Entity
@@ -19,11 +18,11 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     @NotNull
-    private BigInteger id;
+    private Long id;
 
     @Column(name = "phone_number")
     @NotNull
-    private BigInteger phoneNumber;
+    private Long phoneNumber;
 
     @NotNull
     private String email;
