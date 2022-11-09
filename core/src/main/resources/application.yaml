@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/medical
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 9
+  sql:
+    init:
+      mode: always
+      data-location: classpath:sql/data-fill.sql
+
+
+

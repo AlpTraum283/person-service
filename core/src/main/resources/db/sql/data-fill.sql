@@ -34,3 +34,9 @@ values (2, 'user2', 'dXNlcjI=', 'ADMIN'),
        (4, 'user4', 'dXNlcjQ=', 'USER'),
        (5, 'user5', 'dXNlcjU=', 'USER');
 
+Insert into signals (id, person_data_id, description, type)
+values (2, 2, 'description2', 'alert'),
+       (3, 3, 'description3', 'error'),
+       (4, 4, 'description4', 'daily'),
+       (5, 5, 'description5', 'daily');
+
